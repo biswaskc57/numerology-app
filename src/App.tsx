@@ -1,17 +1,19 @@
 import React from 'react';
 
-import './App.module.scss';
-import './styles/themes.scss';
+import styles from './App.module.scss';
 import useTheme from './hooks/useTheme';
-import ThemeToggle from './pages/ThemeToggle';
-import Home from './pages/Home/Home';
 import Footer from './pages/Footer';
+import Home from './pages/Home/Home';
+import ThemeToggle from './pages/ThemeToggle';
+import themestyles from'./styles/themes.module.scss';
 
 const App: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
+  console.log("theme",theme,themestyles[theme] )
+
   return (
-    <div className={`App ${theme}`}>
+    <div className={`${styles.App} ${themestyles[theme]}`}>
       <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
       <main>
         <Home />

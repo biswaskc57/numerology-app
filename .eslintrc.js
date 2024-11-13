@@ -21,7 +21,9 @@ module.exports = {
         version: 'detect',
       },
       'import/resolver': {
-        typescript: {}, // This will help ESLint understand TypeScript paths
+        typescript: {
+          alwaysTryTypes: true, // Optional, helps resolve types even when not explicitly imported
+        },
       },
     },
     rules: {

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const useTheme = () => {
-  const [theme, setTheme] = useState<'light-theme' | 'dark-theme'>('light-theme');
+  const [theme, setTheme] = useState<'lightTheme' | 'darkTheme'>('lightTheme');
 
   const toggleTheme = () => {
-    setTheme(theme === 'light-theme' ? 'dark-theme' : 'light-theme');
+    setTheme(theme === 'lightTheme' ? 'darkTheme' : 'lightTheme');
   };
 
   return { theme, toggleTheme };
